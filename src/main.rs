@@ -22,7 +22,7 @@ fn main() {
     println!("We sit on opposite sides of the table, with the unloaded gun between us.");
 
     loop {
-        
+
         if player_next == 0 {
             println!("I place the gun to my head...");
             println!("...And pull the trigger... ");
