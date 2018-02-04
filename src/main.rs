@@ -23,11 +23,13 @@ fn main() {
 
     loop {
 
+        println!("\nChamber {}...", chamber_next + 1);
+
         if player_next == 0 {
-            println!("I place the gun to my head...");
+            println!("I place one bullet in the revolver and spin the chamber. I snap the chamber into place and I put the gun to my head...");
             println!("...And pull the trigger... ");
         } else {
-            println!("You place the gun to your head...");
+            println!("You place one bullet in the revolver and spin the chamber. You snap the chamber into place and put the gun to your head...");
             println!("Press the [RETURN] key to pull the trigger.");
             let mut guess = String::new();
             io::stdin().read_line(&mut guess).expect("Failed to read line");
@@ -36,13 +38,15 @@ fn main() {
         if chamber_next == chamber_loaded {
             if player_next == 0 {
                 println!("The gun fires and my brains are sprayed all over the wall. It is a grisly scene.");
+                println!("You WIN!");
                 break;
             } else {
-                println!("The gun fires and your brains are sprayed all over the wall. It is a grisly scene.");
+                println!("The gun fires and YOUR brains are sprayed all over the wall. It is a grisly scene.");
+                println!("You LOSE!");
                 break;
             }
         } else {
-            println!("We here a dry click, there was no round in the chamber.");
+            println!("We hear a dry click, there was no round in the chamber.");
         }
 
         // switch to the next player
