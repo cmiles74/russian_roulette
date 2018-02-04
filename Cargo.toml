@@ -1,0 +1,7 @@
+[package]
+name = "russian_roulette"
+version = "0.1.0"
+authors = ["Christopher M. Miles <twitch@nervestaple.com>"]
+
+[dependencies]
+rand = "0.3.14"
