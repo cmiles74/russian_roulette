@@ -15,7 +15,7 @@ Copy-Item "$SRC_DIR\target\$($Env:TARGET)\release\russian_roulette.exe" '.\'
 
 7z a "$ZIP" *
 
-#Push-AppveyorArtifact "$ZIP"
+Push-AppveyorArtifact "$ZIP"
 
 Remove-Item *.* -Force
 Set-Location ..

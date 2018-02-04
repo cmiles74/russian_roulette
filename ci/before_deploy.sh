@@ -21,7 +21,7 @@ main() {
     cross rustc --bin russian_roulette --target $TARGET --release -- -C lto
 
     # Update this to package the right artifacts
-    cp target/$TARGET/release/russian_roulette $stage/
+    cp target/$TARGET/release/russian_roulette* $stage/
 
     cd $stage
     tar czf $src/$CRATE_NAME-$TRAVIS_TAG-$TARGET.tar.gz *
