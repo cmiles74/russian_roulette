@@ -25,6 +25,7 @@ fn main() {
 
         println!("\nRound {}:", chamber_next + 1);
 
+        // load the gun only once
         if chamber_next == 0 {
             if player_next == 0 {
                 println!("I place one bullet in the revolver and spin the chamber. I snap the chamber into place...");
@@ -33,6 +34,7 @@ fn main() {
             }
         }
 
+        // each player picks up the gun
         if player_next == 0 {
             println!("I put the gun to my head...");
             println!("...And pull the trigger... ");
@@ -43,6 +45,7 @@ fn main() {
             io::stdin().read_line(&mut guess).expect("Failed to read line");
         }
 
+        // the game ends when the loaded chamber is fired
         if chamber_next == chamber_loaded {
             if player_next == 0 {
                 println!("The gun fires and my brains are sprayed all over the wall. It is a grisly scene.");
@@ -65,6 +68,6 @@ fn main() {
         }
 
         // increment the chamber
-        chamber_next+=1;
+        chamber_next += 1;
     }
 }
