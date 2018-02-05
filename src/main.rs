@@ -23,13 +23,21 @@ fn main() {
 
     loop {
 
-        println!("\nChamber {}...", chamber_next + 1);
+        println!("\nRound {}:", chamber_next + 1);
+
+        if chamber_next == 0 {
+            if player_next == 0 {
+                println!("I place one bullet in the revolver and spin the chamber. I snap the chamber into place...");
+            } else {
+                println!("You place one bullet in the revolver and spin the chamber. You snap the chamber into place...");
+            }
+        }
 
         if player_next == 0 {
-            println!("I place one bullet in the revolver and spin the chamber. I snap the chamber into place and I put the gun to my head...");
+            println!("I put the gun to my head...");
             println!("...And pull the trigger... ");
         } else {
-            println!("You place one bullet in the revolver and spin the chamber. You snap the chamber into place and put the gun to your head...");
+            println!("You put the gun to your head...");
             println!("Press the [RETURN] key to pull the trigger.");
             let mut guess = String::new();
             io::stdin().read_line(&mut guess).expect("Failed to read line");
