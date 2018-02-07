@@ -8,7 +8,7 @@ fn main() {
     println!("\n** Russian Roulette **\n");
 
     // number of chambers in the revolver
-    const CHAMBERS_TOTAL: i32 = 6;
+    const CHAMBERS_TOTAL: u32 = 6;
 
     // figure out which chamber is loaded
     let chamber_loaded = rand::thread_rng().gen_range(0, CHAMBERS_TOTAL);
@@ -41,8 +41,8 @@ fn main() {
         } else {
             println!("You put the gun to your head...");
             println!("Press the [RETURN] key to pull the trigger.");
-            let mut guess = String::new();
-            io::stdin().read_line(&mut guess).expect("Failed to read line");
+            let mut prompt = String::new();
+            io::stdin().read_line(&mut prompt).expect("Failed to read line");
         }
 
         // the game ends when the loaded chamber is fired
