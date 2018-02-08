@@ -4,14 +4,14 @@ use std::io;
 use rand::Rng;
 
 ///
-/// Provides a simple game of []"Russian Roulette"][0].
+/// Provides a simple game of ["Russian Roulette"][0].
 ///
 /// Bootstrapping function for the application, this initializes our variables
 /// and starts the game.
 ///
 /// [0]: https://en.wikipedia.org/wiki/Russian_roulette
 ///
-pub fn main() {
+fn main() {
 
     println!("\n** Russian Roulette **\n");
 
@@ -58,7 +58,7 @@ pub fn main() {
 ///
 /// Loads the gun for the provided player.
 ///
-pub fn load_gun(player: i32) {
+fn load_gun(player: i32) {
 
     if player == 0 {
         println!("I place one bullet in the revolver and spin the chamber. I snap the chamber into place...");
@@ -73,7 +73,7 @@ pub fn load_gun(player: i32) {
 /// If the provided player is the human, they are prompted before the gun is
 /// fired.
 ///
-pub fn pull_trigger(player: i32) {
+fn pull_trigger(player: i32) {
 
     if player == 0 {
         println!("I put the gun to my head...");
@@ -89,7 +89,7 @@ pub fn pull_trigger(player: i32) {
 ///
 /// Shoots the provided player.
 ///
-pub fn shoot_player(player: i32) {
+fn shoot_player(player: i32) {
 
     if player == 0 {
         println!("The gun fires and my brains are sprayed all over the wall. It is a grisly scene.");
