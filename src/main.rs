@@ -48,11 +48,9 @@ fn main() {
             if player_next == 0 {
                 println!("The gun fires and my brains are sprayed all over the wall. It is a grisly scene.");
                 println!("You WIN!");
-                break;
             } else {
                 println!("The gun fires and YOUR brains are sprayed all over the wall. It is a grisly scene.");
                 println!("You LOSE!");
-                break;
             }
         } else {
             println!("We hear a dry click, there was no round in the chamber.");
