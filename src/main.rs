@@ -13,15 +13,13 @@ fn main() {
     // figure out which chamber is loaded
     let chamber_loaded = rand::thread_rng().gen_range(0, CHAMBERS_TOTAL);
 
-    // we always start at chamber 0
-    let mut chamber_next = 0;
-
     // decide who goes first
     let mut player_next = rand::thread_rng().gen_range(0, 2);
 
     println!("We sit on opposite sides of the table, with the unloaded gun between us.");
 
-    loop {
+    // loop through the chambers of the gun
+    for chamber_next in 0..chamber_loaded + 1 {
 
         println!("\nRound {}:", chamber_next + 1);
 
@@ -66,8 +64,5 @@ fn main() {
         } else {
             player_next = 0;
         }
-
-        // increment the chamber
-        chamber_next += 1;
     }
 }
